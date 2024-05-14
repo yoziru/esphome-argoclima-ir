@@ -1,0 +1,39 @@
+esp32:
+  board: esp32-s3-devkitc-1
+  variant: esp32s3
+  flash_size: 8MB
+  framework:
+    type: arduino
+
+light:
+  #G35=RGB WS2812C-2020
+  - platform: esp32_rmt_led_strip
+    rgb_order: GRB
+    pin: 35
+    num_leds: 4
+    # RMT 0 channels will be occupied by IR
+    rmt_channel: 1
+    chipset: ws2812
+    id: led
+    name: "Led"
+
+#G41=Button
+binary_sensor:
+  - platform: gpio
+    name: Button
+    pin:
+      number: GPIO41
+      inverted: true
+      mode:
+        input: true
+        pullup: true
+    filters:
+      - delayed_off: 10ms
+    on_press:
+      then:
+        - logger.log: Button Pressed
+
+remote_transmitter:
+  pin: GPIO4
+  carrier_duty_percent: 50%
+  id: "ir_transmitter"

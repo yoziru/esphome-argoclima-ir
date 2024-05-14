@@ -1,0 +1,15 @@
+sensor:
+  - platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: 60s
+    icon: mdi:wifi
+
+  - platform: uptime
+    name: "Uptime"
+    update_interval: 60s
+    icon: mdi:clock-outline
+
+  - platform: homeassistant
+    name: "Temperature Sensor From Home Assistant"
+    id: current_temperature
+    entity_id: sensor.office_air_quality_monitor_temperature

@@ -1,0 +1,10 @@
+climate:
+  - platform: custom
+    climates:
+      - name: "AC"
+        icon: mdi:air-conditioner
+    lambda: |-
+      auto argoac = new ArgoAC();
+      argoac->set_sensor(id(current_temperature));
+      App.register_component(argoac);
+      return {argoac};
