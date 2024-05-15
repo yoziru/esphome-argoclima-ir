@@ -1,6 +1,6 @@
 # About
 
-This project lets you use an ESP32 device with a CAN interface to interact with the Zehnder ComfoAir Q ventilation unit.
+This project lets you use an ESP32 device with IR to interact with the Argoclima Ulisse 13 A/C unit with a WREM-3 remote. Tested with M5Stack AtomS3 Lite.
 
 # Installation
 
