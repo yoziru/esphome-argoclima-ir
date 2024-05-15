@@ -4,7 +4,7 @@ TARGET := argoclima-ir-$(BOARD).yml
 
 compile: .esphome/build/argoclima-ir/.pioenvs/argoclima-ir/firmware.bin .esphome/build/argoclima-ir/$(TARGET).touchfile  ## Read the configuration and compile the binary.
 
-.esphome/build/argoclima-ir/$(TARGET).touchfile: .venv/touchfile $(TARGET) include/irargo.h packages/*.yml boards/$(BOARD).yml  ## Validate the configuration and create a binary.
+.esphome/build/argoclima-ir/$(TARGET).touchfile: .venv/touchfile $(TARGET) components/argoclima/*.* packages/*.yml boards/$(BOARD).yml  ## Validate the configuration and create a binary.
 	. .venv/bin/activate; esphome compile $(TARGET)
 	touch .esphome/build/$(TARGET).touchfile
 

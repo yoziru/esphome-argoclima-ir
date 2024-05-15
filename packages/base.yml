@@ -1,5 +1,5 @@
 substitutions:
-  friendly_name: ArgoClima 
+  friendly_name: Argoclima Ulisse 13 DCI 
   device_name: argoclima-ir
   device_description: Ventilation system
   filter_time: 5s
@@ -10,8 +10,11 @@ packages:
   sensors: !include sensors.yml
   text_sensors: !include text_sensors.yml
   climate: !include climate.yml
+  time: !include time.yml
 
-
+external_components:
+  - source: components
+    components: [ argoclima ]
   
 esphome:
   name: ${device_name}
@@ -21,8 +24,6 @@ esphome:
   project:
     name: yoziru.esphome-argoclima-ir
     version: "2024.05.15"
-  includes: 
-  - include/irargo.h
   libraries:
   - IRremoteESP8266
 
@@ -32,11 +33,6 @@ logger:
 api:
   encryption:
     key: !secret api_encryption_key
-
-# sync time with home assistant
-time:
-  - platform: homeassistant
-    id: homeassistant_time
 
 ota:
   password: !secret ota_password
