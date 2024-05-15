@@ -1,0 +1,9 @@
+{
+  "chipFamily": "ESP32-S3",
+  "parts": [
+    {
+      "path": "argoclima-ir-esp32s3/argoclima-ir-esp32s3.bin",
+      "offset": 0
+    }
+  ]
+}

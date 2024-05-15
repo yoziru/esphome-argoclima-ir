@@ -1,0 +1,4 @@
+# CHANGEME: Set these variable to your liking
+title: ESPHome Argoclima IR
+description: Interact with Argoclima Ulisse 13 using ESPHome and Home Assistant
+theme: jekyll-theme-slate
