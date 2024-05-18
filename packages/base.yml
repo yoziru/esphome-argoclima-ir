@@ -25,7 +25,7 @@ esphome:
     name: yoziru.esphome-argoclima-ir
     version: "2024.05.15"
   libraries:
-  - IRremoteESP8266
+  - crankyoldgit/IRremoteESP8266@^2.8.6
 
 logger:
   level: DEBUG
