@@ -13,8 +13,10 @@ packages:
   time: !include time.yml
 
 external_components:
-  - source: components
-    components: [ argoclima ]
+  - components: [ argoclima ]
+    # uncomment for local dev
+    # source: components
+    source: github://yoziru/esphome-argoclima-ir/components@main
   
 esphome:
   name: ${device_name}
