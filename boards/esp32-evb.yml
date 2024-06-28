@@ -1,0 +1,16 @@
+esp32:
+  board: esp32-evb
+  framework:
+    type: arduino
+
+
+remote_transmitter:
+  pin: 12
+  carrier_duty_percent: 50%
+  id: "ir_transmitter"
+
+remote_receiver:
+  pin: 39
+  dump: all
+  id: "ir_receiver"
+
