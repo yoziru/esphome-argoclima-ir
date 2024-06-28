@@ -4,15 +4,15 @@ PROJECT := argoclima-ir
 TARGET := $(PROJECT)-$(BOARD).yml
 HOST_SUFFIX := ""
 
-compile: .esphome/build/argoclima-ir/.pioenvs/argoclima-ir/firmware.bin .esphome/build/argoclima-ir/$(TARGET).touchfile  ## Read the configuration and compile the binary.
+compile: .esphome/build/$(PROJECT)/.pioenvs/$(PROJECT)/firmware.bin .esphome/build/$(PROJECT)/$(TARGET).touchfile  ## Read the configuration and compile the binary.
 
-.esphome/build/argoclima-ir/$(TARGET).touchfile: .venv/touchfile $(TARGET) components/argoclima/*.* packages/*.yml boards/$(BOARD).yml  ## Validate the configuration and create a binary.
+.esphome/build/$(PROJECT)/$(TARGET).touchfile: .venv/touchfile $(TARGET) components/argoclima/*.* packages/*.yml boards/$(BOARD).yml  ## Validate the configuration and create a binary.
 	. .venv/bin/activate; esphome compile $(TARGET)
 	touch .esphome/build/$(TARGET).touchfile
 
-.esphome/build/argoclima-ir/.pioenvs/argoclima-ir/firmware.bin: .esphome/build/argoclima-ir/$(TARGET).touchfile ## Create the binary.
+.esphome/build/$(PROJECT)/.pioenvs/$(PROJECT)/firmware.bin: .esphome/build/$(PROJECT)/$(TARGET).touchfile ## Create the binary.
 
-upload: .esphome/build/argoclima-ir/.pioenvs/argoclima-ir/firmware.bin ## Validate the configuration, create a binary, upload it, and start logs.
+upload: .esphome/build/$(PROJECT)/.pioenvs/$(PROJECT)/firmware.bin ## Validate the configuration, create a binary, upload it, and start logs.
 	. .venv/bin/activate; esphome upload $(TARGET) --device $(PROJECT)$(HOST_SUFFIX); esphome logs $(TARGET) --device $(PROJECT)$(HOST_SUFFIX)
 
 logs:
