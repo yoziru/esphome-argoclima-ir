@@ -1,6 +1,8 @@
 .DEFAULT_GOAL := help
 BOARD := m5stack-atoms3
-TARGET := argoclima-ir-$(BOARD).yml
+PROJECT := argoclima-ir
+TARGET := $(PROJECT)-$(BOARD).yml
+HOST_SUFFIX := ""
 
 compile: .esphome/build/argoclima-ir/.pioenvs/argoclima-ir/firmware.bin .esphome/build/argoclima-ir/$(TARGET).touchfile  ## Read the configuration and compile the binary.
 
@@ -11,10 +13,10 @@ compile: .esphome/build/argoclima-ir/.pioenvs/argoclima-ir/firmware.bin .esphome
 .esphome/build/argoclima-ir/.pioenvs/argoclima-ir/firmware.bin: .esphome/build/argoclima-ir/$(TARGET).touchfile ## Create the binary.
 
 upload: .esphome/build/argoclima-ir/.pioenvs/argoclima-ir/firmware.bin ## Validate the configuration, create a binary, upload it, and start logs.
-	. .venv/bin/activate; esphome upload $(TARGET); esphome logs $(TARGET)
+	. .venv/bin/activate; esphome upload $(TARGET) --device $(PROJECT)$(HOST_SUFFIX); esphome logs $(TARGET) --device $(PROJECT)$(HOST_SUFFIX)
 
 logs:
-	. .venv/bin/activate; esphome logs $(TARGET)
+	. .venv/bin/activate; esphome logs $(TARGET) --device $(PROJECT)$(HOST_SUFFIX)
 
 deps: .venv/touchfile ## Create the virtual environment and install the requirements.
 
