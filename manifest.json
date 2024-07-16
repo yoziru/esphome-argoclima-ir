@@ -6,9 +6,13 @@
   "builds": [
     {
       "chipFamily": "ESP32-S3",
+      "ota": {
+        "path": "argoclima-ir-esp32s3/argoclima-ir-esp32s3.ota.bin",
+        "md5": "a2a1d5194fcc349e502ab67618b5bee4"
+      },
       "parts": [
         {
-          "path": "argoclima-ir-esp32s3/argoclima-ir-esp32s3.bin",
+          "path": "argoclima-ir-esp32s3/argoclima-ir-esp32s3.factory.bin",
           "offset": 0
         }
       ]
