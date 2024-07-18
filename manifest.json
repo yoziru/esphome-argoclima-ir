@@ -1,21 +1,19 @@
 {
   "name": "ESPHome Argoclima IR",
-  "version": "",
+  "version": "2024.7.18",
   "home_assistant_domain": "esphome",
   "new_install_skip_erase": false,
-  "builds": [
-    {
-      "chipFamily": "ESP32-S3",
-      "ota": {
-        "path": "argoclima-ir-esp32s3/argoclima-ir-esp32s3.ota.bin",
-        "md5": "a2a1d5194fcc349e502ab67618b5bee4"
-      },
-      "parts": [
-        {
-          "path": "argoclima-ir-esp32s3/argoclima-ir-esp32s3.factory.bin",
-          "offset": 0
-        }
-      ]
-    }
-  ]
+  "builds": {
+    "chipFamily": "ESP32-S3",
+    "ota": {
+      "path": "argoclima-ir-esp32s3/argoclima-ir-esp32s3.ota.bin",
+      "md5": "897a3c7fe6000c1cd5eb82fbd654b9f0"
+    },
+    "parts": [
+      {
+        "path": "argoclima-ir-esp32s3/argoclima-ir-esp32s3.factory.bin",
+        "offset": 0
+      }
+    ]
+  }
 }
