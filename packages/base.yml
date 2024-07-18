@@ -25,7 +25,7 @@ esphome:
   comment: ${device_description}
   project:
     name: yoziru.esphome-argoclima-ir
-    version: "2024.06.28"
+    version: "2024.7.18"
   libraries:
   - crankyoldgit/IRremoteESP8266@^2.8.6
 
