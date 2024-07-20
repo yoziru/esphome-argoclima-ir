@@ -16,6 +16,7 @@ light:
     chipset: ws2812
     id: led
     name: "Led"
+    entity_category: diagnostic
 
 #G41=Button
 binary_sensor:
