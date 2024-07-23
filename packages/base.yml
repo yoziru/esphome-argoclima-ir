@@ -1,10 +1,7 @@
 substitutions:
   friendly_name: Argoclima Ulisse 13 DCI 
   device_name: argoclima-ir
-  device_description: Ventilation system
-  filter_time: 5s
-  filter_send_every: '1'
-  filter_window_size: '3'
+  device_description: ArgoClima IR remote
 
 packages:
   sensors: !include sensors.yml
