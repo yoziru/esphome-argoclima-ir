@@ -5,10 +5,23 @@
   "new_install_skip_erase": false,
   "builds": [
     {
+      "chipFamily": "ESP32-C6",
+      "ota": {
+        "path": "argoclima-ir-esp32c6/argoclima-ir-esp32c6.ota.bin",
+        "md5": "d0e69b4c1ac2d436d4da9f41ee4fca7d"
+      },
+      "parts": [
+        {
+          "path": "argoclima-ir-esp32c6/argoclima-ir-esp32c6.factory.bin",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "chipFamily": "ESP32-S3",
       "ota": {
         "path": "argoclima-ir-esp32s3/argoclima-ir-esp32s3.ota.bin",
-        "md5": "85eaca43c2592e327ee6fd76522a4e09"
+        "md5": "19bfc5acaeb20e7129f7ed0553d5a583"
       },
       "parts": [
         {
