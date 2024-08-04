@@ -51,7 +51,7 @@ light:
     name: "Led"
     entity_category: diagnostic
 
-#G41=Button
+# G41=Button
 binary_sensor:
   - platform: gpio
     name: Button
@@ -65,7 +65,22 @@ binary_sensor:
     filters:
       - delayed_off: 10ms
 
+# M5Stack Mini Infrared Emitter & Receiver Unit (U002)
 remote_transmitter:
-  pin: GPIO4
   carrier_duty_percent: 50%
   id: "ir_transmitter"
+  pin: 
+    number: GPIO2
+    mode:
+      output: true
+
+remote_receiver:
+  id: ir_receiver
+  rmt_channel: 4
+  pin:
+    number: GPIO1
+    inverted: true
+    mode:
+      input: true
+      pullup: true
+  dump: pronto

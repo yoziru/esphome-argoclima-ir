@@ -9,5 +9,5 @@ jobs:
   publish:
     uses: ./.github/workflows/publish-common.yml
     with:
-      files: argoclima-ir-m5stack-atoms3.yml
+      files: argoclima-ir-m5stack-atoms3.yml,argoclima-ir-m5stack-nanoc6.yml
       name: ESPHome Argoclima IR
