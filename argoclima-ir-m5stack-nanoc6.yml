@@ -3,7 +3,7 @@ substitutions:
 
 packages:
   base: !include packages/base.yml
-  device_base: !include boards/m5stack-atoms3.yml
+  device_base: !include boards/m5stack-nanoc6.yml
 
 dashboard_import:
-  package_import_url: github://yoziru/esphome-argoclima-ir/argoclima-ir-m5stack-atoms3.yml
+  package_import_url: github://yoziru/esphome-argoclima-ir/argoclima-ir-m5stack-nanoc6.yml

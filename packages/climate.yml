@@ -1,5 +1,36 @@
 climate:
-  - platform: argoclima
+  - id: ac
+    platform: argo_ulisse
     name: "AC"
     icon: mdi:air-conditioner
     sensor: current_temperature
+    transmitter_id: ir_transmitter
+
+switch:
+  - platform: template
+    name: "Filter"
+    lambda: return id(ac).get_filter();
+    turn_on_action:
+      - lambda: id(ac).set_filter(true);
+    turn_off_action:
+      - lambda: id(ac).set_filter(false);
+    icon: mdi:air-filter
+    restore_mode: RESTORE_DEFAULT_ON
+  - platform: template
+    name: "Light"
+    lambda: return id(ac).get_light();
+    turn_on_action:
+      - lambda: id(ac).set_light(true);
+    turn_off_action:
+      - lambda: id(ac).set_light(false);
+    icon: mdi:lightbulb
+    restore_mode: RESTORE_DEFAULT_ON
+  - platform: template
+    name: "iFeel"
+    lambda: return id(ac).get_ifeel();
+    turn_on_action:
+      - lambda: id(ac).set_ifeel(true);
+    turn_off_action:
+      - lambda: id(ac).set_ifeel(false);
+    icon: mdi:hand-heart
+    restore_mode: RESTORE_DEFAULT_ON

@@ -13,6 +13,7 @@ jobs:
       matrix:
         file:
           - argoclima-ir-m5stack-atoms3.yml
+          - argoclima-ir-m5stack-nanoc6.yml
     steps:
       - uses: actions/checkout@v4.1.7
       - name: Mock secrets.yaml from example

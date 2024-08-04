@@ -1,12 +1,12 @@
 .DEFAULT_GOAL := help
-BOARD := m5stack-atoms3
+BOARD := m5stack-atoms3-ir
 PROJECT := argoclima-ir
 TARGET := $(PROJECT)-$(BOARD).yml
 HOST_SUFFIX := ""
 
 compile: .esphome/build/$(PROJECT)/.pioenvs/$(PROJECT)/firmware.bin .esphome/build/$(PROJECT)/$(TARGET).touchfile  ## Read the configuration and compile the binary.
 
-.esphome/build/$(PROJECT)/$(TARGET).touchfile: .venv/touchfile $(TARGET) components/argoclima/*.* packages/*.yml boards/$(BOARD).yml  ## Validate the configuration and create a binary.
+.esphome/build/$(PROJECT)/$(TARGET).touchfile: .venv/touchfile $(TARGET) packages/*.yml boards/$(BOARD).yml  ## Validate the configuration and create a binary.
 	. .venv/bin/activate; esphome compile $(TARGET)
 	touch .esphome/build/$(TARGET).touchfile
 

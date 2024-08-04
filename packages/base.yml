@@ -1,5 +1,5 @@
 substitutions:
-  friendly_name: Argoclima Ulisse 13 DCI 
+  friendly_name: Argoclima Ulisse 13 DCI
   device_name: argoclima-ir
   device_description: ArgoClima IR remote
 
@@ -10,11 +10,9 @@ packages:
   time: !include time.yml
 
 external_components:
-  - components: [ argoclima ]
-    # uncomment for local dev
-    # source: components
-    source: github://yoziru/esphome-argoclima-ir/components@main
-  
+  - components: [argo_ulisse]
+    source: github://pr#7187
+
 esphome:
   name: ${device_name}
   name_add_mac_suffix: true
@@ -23,11 +21,16 @@ esphome:
   project:
     name: yoziru.esphome-argoclima-ir
     version: "2024.7.23"
-  libraries:
-  - crankyoldgit/IRremoteESP8266@^2.8.6
 
 logger:
   level: DEBUG
+  logs:
+    light: INFO
+    mdns: INFO
+    scheduler: INFO
+    api: INFO
+    sensor: DEBUG
+    wifi_signal: INFO
 
 api:
   encryption:
@@ -45,6 +48,7 @@ wifi:
     password: !secret wifi_hotspot_password
 
 captive_portal:
+improv_serial:
 
 web_server:
   port: 80
