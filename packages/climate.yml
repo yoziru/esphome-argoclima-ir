@@ -1,11 +1,10 @@
 climate:
-  - platform: argo_ulisse
-    id: ac
+  - id: ac
+    platform: argo_ulisse
     name: "AC"
     icon: mdi:air-conditioner
     sensor: current_temperature
     transmitter_id: ir_transmitter
-    receiver_id: ir_receiver
 
 switch:
   - platform: template
