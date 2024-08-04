@@ -15,9 +15,9 @@ Supported boards:
 
 1. Copy and rename `secrets.yaml.example` to `secrets.yaml` and update it with your WiFi credentials (`wifi_ssid` and `wifi_password`).
 
-2. Set the `ha_room_temperature_sensor` substitution to your room temperature sensor in Home Assistant.
+1. Set the `ha_room_temperature_sensor` substitution to your room temperature sensor in Home Assistant.
 
-3. Build the image with [ESPHome](https://esphome.io/guides/getting_started_command_line.html)
+1. Build the image with [ESPHome](https://esphome.io/guides/getting_started_command_line.html)
 
     ```sh
     make compile BOARD=m5stack-atoms3
