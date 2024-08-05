@@ -1,21 +1,15 @@
-esp32:
+substitutions:
   board: esp32-c6-devkitm-1
   variant: esp32c6
   flash_size: 4MB
+
+esp32:
   framework:
-    type: esp-idf
-    version: 5.3.0
-    platform_version: 6.8.1
     sdkconfig_options:
       CONFIG_OPENTHREAD_ENABLED: n
       CONFIG_ENABLE_WIFI_STATION: y
       CONFIG_USE_MINIMAL_MDNS: y
       CONFIG_ESPTOOLPY_FLASHSIZE_4MB: y
-
-external_components:
-  # fix: Change default carrier_frequency to valid value for ESP-IDF 5.x
-  - components: [remote_transmitter]
-    source: github://pr#7176
 
 light:
   - platform: status_led
@@ -55,8 +49,3 @@ binary_sensor:
         pullup: true
     filters:
       - delayed_off: 10ms
-
-remote_transmitter:
-  carrier_duty_percent: 50%
-  id: "ir_transmitter"
-  pin: GPIO3

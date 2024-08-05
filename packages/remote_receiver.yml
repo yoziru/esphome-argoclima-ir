@@ -1,0 +1,15 @@
+remote_receiver:
+  id: ir_receiver
+  rmt_channel: $ir_receiver_rmt_channel
+  # Settings to optimize recognition of RF devices
+  tolerance: 50%
+  filter: 250us
+  idle: 4ms
+  pin:
+    number: $ir_receiver_pin
+    inverted: $ir_receiver_is_inverted
+    mode:
+      input: true
+      pullup: true
+  dump:
+    - pronto

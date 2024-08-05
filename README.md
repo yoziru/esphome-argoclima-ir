@@ -13,7 +13,7 @@ Supported boards:
 - `m5stack-nanoc6`: M5Stack NanoC6
 - `m5stack-nanoc6-ir`: M5Stack NanoC6 with M5Stack IR unit (U002)
 
-1. Copy and rename `secrets.yaml.example` to `secrets.yaml` and update it with your WiFi credentials (`wifi_ssid` and `wifi_password`).
+1. Copy and rename `secrets.yaml.example` to `secrets.yaml` and update it with your WiFi credentials (`wifi_ssid` and `wifi_password`) and a Home Assistant room temperature sensor entity ID (`ha_room_temperature_sensor`) that will be used to read the room temperature for the iFeel feature.
 
 1. Set the `ha_room_temperature_sensor` substitution to your room temperature sensor in Home Assistant.
 
@@ -21,6 +21,12 @@ Supported boards:
 
     ```sh
     make compile BOARD=m5stack-atoms3
+    ```
+
+    If you are using the IR unit, set the `WITH_IR` flag to true:
+
+    ```sh
+    make compile BOARD=m5stack-atoms3 WITH_IR=true
     ```
 
 

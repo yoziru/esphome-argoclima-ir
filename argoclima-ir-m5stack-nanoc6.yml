@@ -1,5 +1,6 @@
 substitutions:
-  ha_room_temperature_sensor: sensor.your_ha_sensor_temperature
+  ha_room_temperature_sensor: !secret ha_room_temperature_sensor
+  ir_transmitter_pin: GPIO3
 
 packages:
   base: !include packages/base.yml

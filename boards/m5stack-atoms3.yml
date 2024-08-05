@@ -1,16 +1,7 @@
-esp32:
+substitutions:
   board: esp32-s3-devkitc-1
   variant: esp32s3
   flash_size: 8MB
-  framework:
-    type: esp-idf
-    version: 5.3.0
-    platform_version: 6.8.1
-
-external_components:
-  # fix: Change default carrier_frequency to valid value for ESP-IDF 5.x
-  - components: [remote_transmitter]
-    source: github://pr#7176
 
 # Output that blinks the LED
 output:
@@ -18,18 +9,18 @@ output:
     id: status_output
     type: binary
     write_action:
-    - if:
-        condition:
-          lambda: return (state);
-        then:
-          - light.turn_on:
-              id: led
-              brightness: 70%
-              red: 100%
-              green: 0%
-              blue: 0%
-        else:
-          - light.turn_off: led
+      - if:
+          condition:
+            lambda: return (state);
+          then:
+            - light.turn_on:
+                id: led
+                brightness: 70%
+                red: 100%
+                green: 0%
+                blue: 0%
+          else:
+            - light.turn_off: led
 
 light:
   # Enable status LED
@@ -51,7 +42,7 @@ light:
     name: "Led"
     entity_category: diagnostic
 
-#G41=Button
+# G41=Button
 binary_sensor:
   - platform: gpio
     name: Button
@@ -64,8 +55,3 @@ binary_sensor:
         pullup: true
     filters:
       - delayed_off: 10ms
-
-remote_transmitter:
-  pin: GPIO4
-  carrier_duty_percent: 50%
-  id: "ir_transmitter"

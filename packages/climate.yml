@@ -1,3 +1,9 @@
+sensor:
+  - platform: homeassistant
+    name: "Temperature Sensor From Home Assistant"
+    id: current_temperature
+    entity_id: $ha_room_temperature_sensor
+
 climate:
   - id: ac
     platform: argo_ulisse

@@ -1,17 +1,13 @@
 substitutions:
   friendly_name: Argoclima Ulisse 13 DCI
   device_name: argoclima-ir
-  device_description: ArgoClima IR remote
+  device_description: ESPHome IR remote for Argo Ulisse 13 WREM-3
 
 packages:
-  sensors: !include sensors.yml
-  text_sensors: !include text_sensors.yml
+  board: !include board.yml
   climate: !include climate.yml
-  time: !include time.yml
-
-external_components:
-  - components: [argo_ulisse]
-    source: github://pr#7187
+  common: !include common.yml
+  external_components: !include external_components.yml
 
 esphome:
   name: ${device_name}
@@ -20,7 +16,7 @@ esphome:
   comment: ${device_description}
   project:
     name: yoziru.esphome-argoclima-ir
-    version: "2024.7.23"
+    version: "2024.8.0"
 
 logger:
   level: DEBUG

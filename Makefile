@@ -1,7 +1,12 @@
 .DEFAULT_GOAL := help
-BOARD := m5stack-atoms3-ir
+BOARD := m5stack-nanoc6
 PROJECT := argoclima-ir
+WITH_IR := false
 TARGET := $(PROJECT)-$(BOARD).yml
+ifeq ($(WITH_IR), true)
+	TARGET := $(PROJECT)-$(BOARD)-ir.yml
+endif
+
 HOST_SUFFIX := ""
 
 compile: .esphome/build/$(PROJECT)/.pioenvs/$(PROJECT)/firmware.bin .esphome/build/$(PROJECT)/$(TARGET).touchfile  ## Read the configuration and compile the binary.
