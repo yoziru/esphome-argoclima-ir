@@ -16,10 +16,10 @@ esphome:
   comment: ${device_description}
   project:
     name: yoziru.esphome-argoclima-ir
-    version: "2024.8.0"
+    version: "2025.7.24"
 
 logger:
-  level: DEBUG
+  level: VERBOSE
   logs:
     light: INFO
     mdns: INFO

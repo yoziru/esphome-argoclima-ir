@@ -2,7 +2,6 @@ substitutions:
   ha_room_temperature_sensor: !secret ha_room_temperature_sensor
   ir_transmitter_pin: GPIO2
   ir_receiver_pin: GPIO1
-  ir_receiver_rmt_channel: "4"
   ir_receiver_is_inverted: "true"
 
 climate:

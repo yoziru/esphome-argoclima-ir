@@ -1,6 +1,7 @@
 external_components:
   - components: [argo_ulisse]
+    refresh: 1h
     source: github://pr#7187
-  # fix: Change default carrier_frequency to valid value for ESP-IDF 5.x
-  - components: [remote_transmitter]
-    source: github://pr#7176
+    # source:
+    #   type: local
+    #   path: ../esphome/esphome/components
