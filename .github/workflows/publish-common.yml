@@ -54,11 +54,10 @@ jobs:
         run: |
           esphome_version=$(grep esphome requirements.txt | cut -d'=' -f3)
           echo "esphome_version=$esphome_version" >> "$GITHUB_OUTPUT"
-      - uses: esphome/build-action@v3.2.0
+      - uses: esphome/build-action@v7.0.0
         id: esphome-build
         with:
-          cache: true
-          yaml_file: ${{ matrix.file }}
+          yaml-file: ${{ matrix.file }}
           version: ${{ steps.get_esphome_version.outputs.esphome_version }}
       - name: Move generated files to output
         run: |
