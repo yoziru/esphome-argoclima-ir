@@ -9,9 +9,6 @@ climate:
     receiver_id: ir_receiver
 
 packages:
-  base: !include packages/base.yml
+  dashboard: !include packages/dashboard.yml
   remote_receiver: !include packages/remote_receiver.yml
   device_base: !include boards/m5stack-atoms3.yml
-
-dashboard_import:
-  package_import_url: github://yoziru/esphome-argoclima-ir/argoclima-ir-m5stack-atoms3-ir.dashboard.yml@main
