@@ -1,0 +1,14 @@
+# This package deliberately excludes esphome identity, API, and Wi-Fi credentials.
+# ESPHome Device Builder owns those settings in each device's local configuration.
+packages:
+  board: !include board.yml
+  climate: !include climate.yml
+  common: !include common.yml
+  project: !include project.yml
+  external_components: !include external_components.yml
+
+logger: !include logger.yml
+
+ota:
+  - platform: esphome
+    password: $ota_password

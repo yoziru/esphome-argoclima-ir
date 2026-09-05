@@ -14,4 +14,4 @@ packages:
   device_base: !include boards/m5stack-nanoc6.yml
 
 dashboard_import:
-  package_import_url: github://yoziru/esphome-argoclima-ir/argoclima-ir-m5stack-nanoc6-ir.yml
+  package_import_url: github://yoziru/esphome-argoclima-ir/argoclima-ir-m5stack-nanoc6-ir.dashboard.yml@main
