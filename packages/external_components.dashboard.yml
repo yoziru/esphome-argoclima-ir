@@ -1,0 +1,10 @@
+# Device Builder variant: same fork component as local builds, fetched from
+# git (device builders cannot use the local-checkout override below).
+external_components:
+  - components: [argo_ulisse]
+    refresh: 1h
+    source:
+      type: git
+      url: https://github.com/yoziru/esphome.git
+      ref: add-argoclima-ir
+      path: esphome/components
