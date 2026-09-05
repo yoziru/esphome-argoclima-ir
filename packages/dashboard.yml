@@ -5,17 +5,9 @@ packages:
   climate: !include climate.yml
   common: !include common.yml
   project: !include project.yml
-  external_components: !include external_components.dashboard.yml
+  external_components: !include external_components.yml
 
-logger:
-  level: VERBOSE
-  logs:
-    light: INFO
-    mdns: INFO
-    scheduler: INFO
-    api: INFO
-    sensor: DEBUG
-    wifi_signal: INFO
+logger: !include logger.yml
 
 ota:
   - platform: esphome

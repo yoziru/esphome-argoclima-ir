@@ -1,7 +1,0 @@
-external_components:
-  - components: [argo_ulisse]
-    refresh: 1h
-    source: github://pr#7187
-    # source:
-    #   type: local
-    #   path: ../esphome/esphome/components

@@ -1,0 +1,8 @@
+level: VERBOSE
+logs:
+  light: INFO
+  mdns: INFO
+  scheduler: INFO
+  api: INFO
+  sensor: DEBUG
+  wifi_signal: INFO

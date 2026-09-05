@@ -16,15 +16,7 @@ esphome:
   friendly_name: ${friendly_name}
   comment: ${device_description}
 
-logger:
-  level: VERBOSE
-  logs:
-    light: INFO
-    mdns: INFO
-    scheduler: INFO
-    api: INFO
-    sensor: DEBUG
-    wifi_signal: INFO
+logger: !include logger.yml
 
 api:
   encryption:
