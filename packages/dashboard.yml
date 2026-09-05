@@ -5,10 +5,13 @@ packages:
   climate: !include climate.yml
   common: !include common.yml
   project: !include project.yml
-  external_components: !include external_components.yml
+  external_components: !include external_components.dashboard.yml
 
 logger: !include logger.yml
 
 ota:
   - platform: esphome
     password: $ota_password
+
+# Same as CLI builds (base.yml): makes the Wi-Fi fallback AP usable.
+captive_portal:
