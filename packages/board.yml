@@ -2,11 +2,12 @@ esp32:
   board: $board
   variant: $variant
   flash_size: $flash_size
-  framework:
-    type: esp-idf
+  # framework defaults to esp-idf for all variants since ESPHome 2026.1;
+  # no Arduino dependency remains, so no explicit framework block.
 
 remote_transmitter:
   pin: $ir_transmitter_pin
+  # Required by validation even though 50% is the component default.
   carrier_duty_percent: 50%
   id: "ir_transmitter"
   non_blocking: true
