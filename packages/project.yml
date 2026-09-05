@@ -1,4 +1,4 @@
 esphome:
   project:
     name: yoziru.esphome-argoclima-ir
-    version: "2025.7.24"
+    version: "2026.8.2"
