@@ -2,7 +2,7 @@
   "chipFamily": "ESP32-S3",
   "ota": {
     "path": "argoclima-ir-esp32s3.ota.bin",
-    "md5": "5df880a00f2d7245ad53c32867d9cf17"
+    "md5": "11b5abbf7a5097cbf7083684a370677c"
   },
   "parts": [
     {
