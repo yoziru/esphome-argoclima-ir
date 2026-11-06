@@ -8,15 +8,15 @@
       "chipFamily": "ESP32-C6",
       "ota": {
         "path": "argoclima-ir-esp32c6.ota.bin",
-        "md5": "ce329512d7b00e00f8bff3344fc41998",
-        "sha256": "1ce0b1151c878c4686faf2e7bec8d2bbbcb2f8a0ddb5fb474d821bd99c53fba2"
+        "md5": "88e47a40a1365c4846973000408fe055",
+        "sha256": "e632a77c8192a88a2ddf9ff6173bc49508ed3552b9fff770fac75a1b501d043f"
       },
       "parts": [
         {
           "path": "argoclima-ir-esp32c6.factory.bin",
           "offset": 0,
-          "md5": "5a08018624ff087161f3108edeae2880",
-          "sha256": "5cd62cbb4630f25c17874e893db4d4525d8beac6890a214b88fc3bb1114d6fcd"
+          "md5": "3130dd2e999d3aac5e5a89c73fd85f37",
+          "sha256": "8a57e5c895d40566907ae5a2532c06b4f8fb70637f59ad62d97403de18fd5cfc"
         }
       ]
     },
@@ -24,15 +24,15 @@
       "chipFamily": "ESP32-S3",
       "ota": {
         "path": "argoclima-ir-esp32s3.ota.bin",
-        "md5": "1febba35577bd660d123c52e41b55c79",
-        "sha256": "3c6a13a3ebc5dfc20cee7fbe94265350d805173b7c648e48fdf8f5d3d30f1535"
+        "md5": "b6e35037cb38a497b17a90c5ab12c504",
+        "sha256": "669944228fbb9732e0beaea94800564931ee5be837a15501bc65860092b43e5c"
       },
       "parts": [
         {
           "path": "argoclima-ir-esp32s3.factory.bin",
           "offset": 0,
-          "md5": "e96a3b8d63f050c89e820737df134c28",
-          "sha256": "1f9ac8c06c143320097dc998a4ddb1aee6be9a0be5530d12a8acc561c7211ccb"
+          "md5": "e5e22e46b1c75f58a389859524ba8dc2",
+          "sha256": "04c821e862712b3a8fc250aba425316ebab5534bf7dace06381cb839c204c772"
         }
       ]
     }

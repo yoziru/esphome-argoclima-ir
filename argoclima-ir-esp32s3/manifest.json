@@ -2,15 +2,15 @@
   "chipFamily": "ESP32-S3",
   "ota": {
     "path": "argoclima-ir-esp32s3.ota.bin",
-    "md5": "1febba35577bd660d123c52e41b55c79",
-    "sha256": "3c6a13a3ebc5dfc20cee7fbe94265350d805173b7c648e48fdf8f5d3d30f1535"
+    "md5": "b6e35037cb38a497b17a90c5ab12c504",
+    "sha256": "669944228fbb9732e0beaea94800564931ee5be837a15501bc65860092b43e5c"
   },
   "parts": [
     {
       "path": "argoclima-ir-esp32s3.factory.bin",
       "offset": 0,
-      "md5": "e96a3b8d63f050c89e820737df134c28",
-      "sha256": "1f9ac8c06c143320097dc998a4ddb1aee6be9a0be5530d12a8acc561c7211ccb"
+      "md5": "e5e22e46b1c75f58a389859524ba8dc2",
+      "sha256": "04c821e862712b3a8fc250aba425316ebab5534bf7dace06381cb839c204c772"
     }
   ]
 }
