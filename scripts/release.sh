@@ -90,7 +90,7 @@ if git diff --cached --quiet; then
 fi
 
 git commit -m "release: v$next_version"
-git tag "v$next_version"
+git tag -m "v$next_version" "v$next_version"
 git push --atomic origin main "v$next_version"
 
 gh release create "v$next_version" --title "v$next_version" --generate-notes
