@@ -1,6 +1,6 @@
 {
   "name": "ESPHome Argoclima IR",
-  "version": "2026.8.2",
+  "version": "2026.10.1",
   "home_assistant_domain": "esphome",
   "new_install_skip_erase": false,
   "builds": [
@@ -8,15 +8,15 @@
       "chipFamily": "ESP32-C6",
       "ota": {
         "path": "argoclima-ir-esp32c6.ota.bin",
-        "md5": "ba922fa185eb352edb9298e79d5b0440",
-        "sha256": "881e322a8bbaada2bee2ace08caaa4e2c485e79722f9421c6187c860892fa31f"
+        "md5": "2ab46512a44acc62bb5c656dfb67f279",
+        "sha256": "48b702a618e048f87328dbf71ed5946e9acc2ca6af534fa1af9bcdc27df12e13"
       },
       "parts": [
         {
           "path": "argoclima-ir-esp32c6.factory.bin",
           "offset": 0,
-          "md5": "de5254e964ac586e5637e5c18b0fecfe",
-          "sha256": "2fc97f1fe8f5f95ff945138b9eee18ca9fdd789da68e1b8359b01a4c3bca6781"
+          "md5": "31e9059a0e476b8c968e25cfd02128ed",
+          "sha256": "4417e29a79897d7c14ff3c16294536964d954b5570c38afe69a7cdd24183cc9a"
         }
       ]
     },
@@ -24,15 +24,15 @@
       "chipFamily": "ESP32-S3",
       "ota": {
         "path": "argoclima-ir-esp32s3.ota.bin",
-        "md5": "09447707c0186e85a19f838231bff985",
-        "sha256": "8941a7016d63df99fa9547f30bed874df46d5af99354cff29ebe10e95ca0d88a"
+        "md5": "ec4538c28c1bf4a6038d20fb167b82c4",
+        "sha256": "55923f08175d78fdeebe125892d0a1a709f4d2c6847f1c1a1d360ab368c244fb"
       },
       "parts": [
         {
           "path": "argoclima-ir-esp32s3.factory.bin",
           "offset": 0,
-          "md5": "e5a6f6f00aecb0bf204ebf6a4475cb5f",
-          "sha256": "1ff255a3b37c3d80c69880c1c5fdd86dba2860e88daa9d91502e72d00502e52c"
+          "md5": "dc31aadf7a303ef58c4a3cc77a23bb5e",
+          "sha256": "4aad3df55aa237a6c79f9ddc18888456fb06d34fa3ce041ab8a90abf1b8cb0dc"
         }
       ]
     }
