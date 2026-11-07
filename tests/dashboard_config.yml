@@ -1,5 +1,7 @@
 # Mirrors the configuration materialized by ESPHome Device Builder for an adopted device.
 substitutions:
+  # Selects both the YAML package and the custom component code.
+  argoclima_ir_ref: main
   name: argoclima-ir-dashboard-test
   friendly_name: Argoclima IR Dashboard Test
   ota_password: !secret test_ota_password

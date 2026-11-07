@@ -1,14 +1,4 @@
+# Local builds use the components from the currently checked-out repository.
 external_components:
   - components: [argo_ulisse]
-    refresh: 1h
-    # Argo component lives on the fork (upstream PR esphome/esphome#7187 is
-    # closed); the branch is rebased on upstream dev and migrated past the
-    # ClimateTraits feature-flags removal.
-    source:
-      type: git
-      url: https://github.com/yoziru/esphome.git
-      ref: add-argoclima-ir
-      path: esphome/components
-    # source:
-    #   type: local
-    #   path: ../esphome/esphome/components
+    source: components

@@ -30,7 +30,7 @@ validate-dashboard-config: check-uv ## Validate the generated-style ESPHome Dash
 .PHONY: validate-dashboard-config
 
 # Build firmware.bin if YAML sources or dependencies change
-.esphome/build/$(PROJECT)/.pioenvs/$(PROJECT)/firmware.bin: $(TARGET) packages/*.yml $(BOARD_FILES) requirements.txt $(shell command -v uv 2>/dev/null)
+.esphome/build/$(PROJECT)/.pioenvs/$(PROJECT)/firmware.bin: $(TARGET) packages/*.yml components/*/* $(BOARD_FILES) requirements.txt $(shell command -v uv 2>/dev/null)
 	$(UV_CHECK)
 	uvx --with pip esphome==$(ESPHOME_VERSION) compile $(TARGET)
 
