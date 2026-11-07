@@ -19,7 +19,6 @@ on:
 
 permissions:
   contents: write
-  actions: write
 
 concurrency:
   group: release
@@ -28,6 +27,8 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
+    environment: release
+
     steps:
       - name: Require main branch
         run: |
@@ -36,15 +37,27 @@ jobs:
             exit 1
           fi
 
+      # Main requires PRs and status checks; an admin PAT bypasses the ruleset
+      # and its push also triggers the publish workflow (GITHUB_TOKEN would not).
+      - name: Require release token
+        env:
+          RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: |
+          if [ -z "$RELEASE_TOKEN" ]; then
+            echo "Set RELEASE_TOKEN in the protected 'release' environment" >&2
+            exit 1
+          fi
+
       - name: Checkout
         uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           ref: main
+          token: ${{ secrets.RELEASE_TOKEN }}
 
       - name: Run release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
           INPUT_BUMP: ${{ inputs.bump }}
           INPUT_VERSION: ${{ inputs.version }}
         run: |
@@ -55,9 +68,3 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           ./scripts/release.sh "$release_arg"
-
-      # GITHUB_TOKEN pushes do not trigger other workflows, so publish the tag explicitly.
-      - name: Publish released firmware
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run publish.yml --ref "$(git describe --tags --abbrev=0)"
