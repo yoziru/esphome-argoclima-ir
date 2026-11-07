@@ -2,15 +2,15 @@
   "chipFamily": "ESP32-C6",
   "ota": {
     "path": "argoclima-ir-esp32c6.ota.bin",
-    "md5": "5147f2f06e4cb13487100716f7e7ed5d",
-    "sha256": "97daef59353f937e79cab370f95fb2fd740a581efd97e47ed7692eb34a866963"
+    "md5": "0db16cb50bf7bc10b1a56c1ec216108b",
+    "sha256": "3c30ebd613aa47da08368a4423868cc85efb204dcba140b7a3cceab9c4a0fc92"
   },
   "parts": [
     {
       "path": "argoclima-ir-esp32c6.factory.bin",
       "offset": 0,
-      "md5": "067deb6aafc71a87c9f4a2ff8e472e26",
-      "sha256": "61494fe4ab4c06ca302001439759d9e47fbba84de862f752e549223af247e767"
+      "md5": "ab4e82d051d856f4d70e2474d0920a4a",
+      "sha256": "ace514d2e25666909e2e4ee320f43b899c28cc6d4f73bff86ec0e9cbee3dd82b"
     }
   ]
 }
