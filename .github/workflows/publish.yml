@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 # Serialize deploys: parallel runs race the gh-pages ref lock and one fails
 # (a push landing between fetch and push is rejected). Queue instead of
 # cancelling so a deploy is never interrupted.
 concurrency:
-  group: publish-${{ github.ref }}
+  group: publish
   cancel-in-progress: false
 
 jobs:
